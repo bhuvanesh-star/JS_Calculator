@@ -1,0 +1,52 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(to right, #0a9715,#021);
+}
+.calc-grid{
+    display:grid;
+    justify-content: center;
+    align-items: content;
+    min-height:100vh; 
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows:minmax(120px, auto) repeat(5, 100px);
+    /* minmax represents the min-value to be entered and max auto 
+    so that it can grow accordingly to the number entered */
+}
+.calc-grid > button{
+    cursor:pointer;
+    font-size:2rem;
+    border:1px solid black;
+    background-color:#a3b3b3
+}
+
+.calc-grid > button:hover{
+    background-color:white;
+}
+.span-two{
+    grid-column: span 2;
+}
+.calculation{
+    grid-column:1/-1;
+    background-color:rgba(0, 0, 0, .75);
+    display:flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    word-wrap:break-word;
+    word-break: break-all;
+    padding:10px;
+}
+
+.calculation  .query-line {
+    color:rgb(185, 184, 184);
+    font-size:1.5rem
+}
+.calculation  .answer-line{
+    color:rgb(243, 240, 240);
+    font-size:2.5rem
+}
